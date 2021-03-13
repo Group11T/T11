@@ -14,7 +14,7 @@
 	<name>exchangeconnectivity</name>
 	<description>Exchange Connectivity Microservice for T11 trade engine</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
