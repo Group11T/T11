@@ -1,2 +1,0 @@
-io/t11/clientConnectivity/ClientConnectivityApplication.java
- io.t11.clientConnectivity.ClientConnectivityApplication
