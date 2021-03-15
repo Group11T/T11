@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @PropertySource({ "classpath:persistence.properties" })
-@EnableJpaRepositories(basePackages = {""})
+@EnableJpaRepositories(basePackages = {"io.t11.clientConnectivity.dao"})
 @Configuration
 @EnableTransactionManagement
 public class PersistenceConfig {
