@@ -1,4 +1,4 @@
-package com.io.t11.exchangeconnectivity.index;
+package com.io.t11.exchangeconnectivity.Index;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,13 +10,8 @@ import java.time.LocalDate;
 @RequestMapping(path = "/")
 
 public class IndexController {
-    // index controller
     @GetMapping
-    public IndexRoute index() {
-        return new IndexRoute(
-                true,
-                "Exchange Connectivity Service",
-                LocalDate.now()
-        );
+    public IndexRoute indexRoute() {
+        return new IndexRoute( true, "Exchange Connectivity", LocalDate.now());
     }
 }
