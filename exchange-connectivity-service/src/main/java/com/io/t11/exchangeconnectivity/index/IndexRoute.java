@@ -1,4 +1,4 @@
-package com.io.t11.exchangeconnectivity.index;
+package com.io.t11.exchangeconnectivity.Index;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,7 @@ public class IndexRoute {
     private String serviceName;
     private LocalDate date;
 
-    public IndexRoute(boolean status, String serviceName, LocalDate date) {
+    public IndexRoute(boolean status, String serviceName, LocalDate date){
         this.status = status;
         this.serviceName = serviceName;
         this.date = date;
