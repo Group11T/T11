@@ -3,11 +3,11 @@ package io.t11.clientConnectivity.service;
 public class UserService {
 
     public String newUser(String userName, String password){
-        return "created new user ......";
+        return ""; // so You Know something must be done here
     }
 
-    public void authenticateUSer(){
-
+    public String authenticateUSer(){
+        return ""; // so You Know something must be done here
     }
 
 }
