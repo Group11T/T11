@@ -1,0 +1,30 @@
+io/t11/clientConnectivity/config/PersistenceConfig.java
+ io.t11.clientConnectivity.config.PersistenceConfig
+io/t11/clientConnectivity/controller/RestOrderController.java
+ io.t11.clientConnectivity.controller.RestOrderController
+io/t11/clientConnectivity/service/OrderService.java
+ io.t11.clientConnectivity.service.OrderService
+io/t11/clientConnectivity/service/OrderClient.java
+ io.t11.clientConnectivity.service.OrderClient
+io/t11/clientConnectivity/dto/OrderDto.java
+ io.t11.clientConnectivity.dto.OrderDto
+io/t11/clientConnectivity/model/Order.java
+ io.t11.clientConnectivity.model.Order
+io/t11/validatiingorders/wsdl/ValidateOrderResponse.java
+ io.t11.validatiingorders.wsdl.ValidateOrderResponse
+io/t11/validatiingorders/wsdl/ValidateOrderRequest.java
+ io.t11.validatiingorders.wsdl.ValidateOrderRequest
+io/t11/clientConnectivity/ClientConnectivityApplication.java
+ io.t11.clientConnectivity.ClientConnectivityApplication
+io/t11/validatiingorders/wsdl/package-info.java
+ io.t11.validatiingorders.wsdl.package-info
+io/t11/clientConnectivity/config/OrderValidationClientConfig.java
+ io.t11.clientConnectivity.config.OrderValidationClientConfig
+io/t11/validatiingorders/wsdl/ObjectFactory.java
+ io.t11.validatiingorders.wsdl.ObjectFactory
+io/t11/validatiingorders/wsdl/Order.java
+ io.t11.validatiingorders.wsdl.Order
+io/t11/clientConnectivity/service/IOrderService.java
+ io.t11.clientConnectivity.service.IOrderService
+io/t11/clientConnectivity/dao/OrderRepository.java
+ io.t11.clientConnectivity.dao.OrderRepository
