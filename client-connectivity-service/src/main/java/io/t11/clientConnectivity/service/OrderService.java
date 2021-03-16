@@ -1,6 +1,5 @@
 package io.t11.clientConnectivity.service;
 
-import com.group11.soap.api.order_creation.CreateOrderRequest;
 import io.t11.clientConnectivity.dao.OrderRepository;
 import io.t11.clientConnectivity.dto.OrderDto;
 import io.t11.clientConnectivity.model.Order;
@@ -23,19 +22,15 @@ public class OrderService implements IOrderService{
         return orderRepository.save(order);
     }
 
-    @Override
-    public Order sendOrderForValidation(Order order) {
-        return null;
-    }
-
-//    public Order createNewOrder(CreateOrderRequest orderRequest){
-//        Order order = new Order();
-//        order.setProduct(orderRequest.getProduct());
-//        order.setQuantity(orderRequest.getQuantity());
-//        order.setPrice(orderRequest.getQuantity());
+//    @Override
+//    public  createOrderForValidation(Order order) {
+//        Order orderForValidation = new Order();
+////        order.setProduct(orderRequest.getProduct());
+////        order.setQuantity(orderRequest.getQuantity());
+////        order.setPrice(orderRequest.getQuantity());
 //        order.setSide(orderRequest.getSide());
 //        return order;
+//        return null;
 //    }
-
 
 }

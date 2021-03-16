@@ -32,40 +32,25 @@ sourceSets {
 
 task genJaxb {
 	ext.sourcesDir = "${buildDir}/generated-sources/jaxb"
-	ext.classesDir = "${buildDir}/classes/jaxb"
-	ext.schema = "http://localhost:8040/ws/orders.wsdl"
+	ext.schema = "src/main/resources/orders.xsd"
 
-	outputs.dir classesDir
+	outputs.dir sourcesDir
 
 	doLast() {
 		project.ant {
 			taskdef name: "xjc", classname: "com.sun.tools.xjc.XJCTask",
 					classpath: configurations.jaxb.asPath
 			mkdir(dir: sourcesDir)
-			mkdir(dir: classesDir)
 
-			xjc(destdir: sourcesDir, schema: schema,
-					package: "io.t11.validatiingorders.wsdl") {
+			xjc(destdir: sourcesDir, schema: schema) {
 				arg(value: "-wsdl")
 				produces(dir: sourcesDir, includes: "**/*.java")
-			}
-
-			javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
-					debugLevel: "lines,vars,source",
-					classpath: configurations.jaxb.asPath) {
-				src(path: sourcesDir)
-				include(name: "**/*.java")
-				include(name: "*.java")
-			}
-
-			copy(todir: classesDir) {
-				fileset(dir: sourcesDir, erroronmissingdir: false) {
-					exclude(name: "**/*.java")
-				}
 			}
 		}
 	}
 }
+
+compileJava.dependsOn genJaxb
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -75,12 +60,9 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'wsdl4j', name: 'wsdl4j', version: '1.6.3'
-	implementation 'org.glassfish.jaxb:jaxb-runtime'
-	compile(files(genJaxb.classesDir).builtBy(genJaxb))
 	jaxb("org.glassfish.jaxb:jaxb-xjc")
 }
 
 test {
 	useJUnitPlatform()
 }
-

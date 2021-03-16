@@ -7,5 +7,5 @@ public interface IOrderService {
 
     Order createNewOrder(OrderDto orderDto );
 
-    Order sendOrderForValidation(Order order);
+//    Order sendOrderForValidation(Order order);
 }

@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:val="http://www.group11.com/soap/api/order-validation">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <val:ValidateOrderRequest>
+            <val:product>AAPL</val:product>
+            <val:quantity>2</val:quantity>s
+            <val:price>4.3</val:price>
+            <val:side>Buy</val:side>
+        </val:ValidateOrderRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
